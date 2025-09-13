@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500;600&family=Pacifico&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  /* Cute, modern fonts */
+  --font-serif: 'Dancing Script', cursive;
+  --font-sans: 'Poppins', sans-serif;
+  --font-script: 'Pacifico', cursive;
+  --font-accent: 'Quicksand', sans-serif;
+  
+  /* Beige and earthy color palette */
+  --color-primary: #d2b48c; /* Tan/Beige */
+  --color-primary-light: #e6d7bf; /* Lighter beige */
+  --color-secondary: #a98467; /* Taupe/Brown */
+  --color-secondary-light: #c8b6a6; /* Lighter taupe */
+  --color-accent-gold: #d4ac6e; /* Golden beige */
+  --color-accent-mint: #b6ad90; /* Sage/Olive */
+  --color-bg-light: #f5f5dc; /* Classic beige */
+  --color-text-dark: #5e503f; /* Dark brown */
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-light);
+  /* Simple elegant background */
+  background: linear-gradient(135deg, #f5f5dc 0%, #e6d7bf 100%);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(169, 132, 103, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Decorative elements */
+.wedding-script {
+  font-family: var(--font-script);
+  color: var(--color-primary);
+}
+
+/* Cute animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+/* Decorative classes */
+.heart-bg {
+  position: relative;
+}
+
+.heart-bg::before {
+  content: '♡';
+  position: absolute;
+  font-size: 2em;
+  opacity: 0.1;
+  z-index: -1;
+  color: var(--color-primary);
+}
+
+.cute-border {
+  border: 2px dashed var(--color-primary-light);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.cute-shadow {
+  box-shadow: 0 5px 15px rgba(210, 180, 140, 0.3);
+}
+
+/* Button styles */
+.cute-button {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  color: white;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(210, 180, 140, 0.4);
+}
+
+.cute-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(210, 180, 140, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-light);
+  border-radius: 10px;
+  border: 2px solid var(--color-bg-light);
+}
+
+@keyframes float-simple {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom wedding-themed scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(169, 132, 103, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(169, 132, 103, 0.6);
+}
